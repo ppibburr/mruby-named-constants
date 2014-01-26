@@ -7,7 +7,11 @@ class ::Module
       
       q.module_eval do
         singleton_class.define_method :inspect do
-          this == ::Object ? "#{n}" : "#{this}::#{n}"
+          this == ::Object ? "#{n}" : "#{this.inspect}::#{n}"
+        end
+        
+        singleton_class.define_method :to_s do
+          this == ::Object ? "#{n}" : "#{this.inspect}::#{n}"
         end
       end      
     end
