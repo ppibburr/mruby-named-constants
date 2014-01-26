@@ -1,7 +1,7 @@
 mruby-named-constants
 =====================
 
-MRuby library that allows constants set via `const_set` to return name when `inspect` or `to_s` is called on them
+MRuby library that allows constants of `Module | Class` set via `const_set` to return name when `inspect` or `to_s` is called on them
 
 ```ruby
   ::Object.const_set :A, Class.new
